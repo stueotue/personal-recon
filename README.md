@@ -6,3 +6,5 @@ Tools :
 
 Similar to https://github.com/nahamsec/lazyrecon but for windows.
 
+Dont forget to change the variable and do whatever you want.
+
