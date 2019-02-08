@@ -28,6 +28,4 @@ type "%saveresult%\%domain%.txt" | %aquatonepath%aquatone -out %saveresult%\aqua
 echo Aquatone Done
 echo Performing Dirsearch...
 python3 %dirsearchpath%dirsearch.py -L %saveresult%\aquatone-report\aquatone_urls.txt -e *
-echo Perform cc.py
-python3 R:\Richard\lab\Tools\cc.py\cc.py -o %saveresult%\cc-%domain%.txt -u %domain%
 echo Done ! Save every result in %saveresult%
