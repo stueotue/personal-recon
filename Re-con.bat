@@ -20,11 +20,11 @@ set saveresult=%rootpath%%domain%-%year%-%month%-%day%
 mkdir %saveresult%
 echo Enumerate %domain%
 echo Amass is running...
-%amasspath%amass -d %domain% -o %saveresult%\%domain%.txt --passive
+%amasspath%amass enum -d %domain% -o %saveresult%\%domain%.txt --passive
 echo Amass Done
 echo Aquatone Enumerate %domain%
 echo Starting Aquatone...
-type "%saveresult%\%domain%.txt" | %aquatonepath%aquatone enum -out %saveresult%\aquatone-report\ -chrome-path %chromiumpath%
+type "%saveresult%\%domain%.txt" | %aquatonepath%aquatone -out %saveresult%\aquatone-report\ -chrome-path %chromiumpath%
 echo Aquatone Done
 echo Performing Dirsearch...
 python3 %dirsearchpath%dirsearch.py -L %saveresult%\aquatone-report\aquatone_urls.txt -e *
